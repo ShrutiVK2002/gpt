@@ -1,0 +1,23 @@
+{
+  "name": "gpt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@langchain/anthropic": "^0.0.9",
+    "@langchain/community": "^0.0.21",
+    "@langchain/openai": "^0.0.13",
+    "@upstash/redis": "^1.28.2",
+    "langchain": "^0.1.9",
+    "openai": "^4.26.0",
+    "pdf-parse": "^1.1.1"
+  }
+}

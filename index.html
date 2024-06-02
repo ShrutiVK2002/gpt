@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #A9C9FF;
+            background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            /* background-image: url('https://images.app.goo.gl/vWWJGFRwo3MLVhdH7');
+            display: flex; */
+        }
+  
+        .container {
+            text-align: center;
+        }
+  
+        form {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            width: 35%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add margin to separate from the output box */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Center the form within the container */
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+  
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+  
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #0c0c0c;
+            border-radius: 4px;
+        }
+  
+        button {
+            background-color: #58097c;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Add margin to separate from the input box */
+        }
+  
+        button:hover {
+            background-color: #c41197;
+        }
+  
+        #outputBox {
+            border: 1px solid #070707;
+            padding: 10px;
+            width: 35%;
+            min-height: 200px; /* Adjusted the min-height for a smaller output box */
+            resize: both;
+            overflow: auto;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        @media (max-width: 600px) {
+            input {
+                width: 100%;
+            }
+
+            #outputBox {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="https://images.app.goo.gl/vWWJGFRwo3MLVhdH7" alt="Description of the image"> -->
+    <form id="form">
+        <label for="userInput"> Hey! Wanna Talk </label>
+        <input type="text" id="userInput" name="userInput" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Output box to display OpenAI GPT-3.5-turbo response -->
+    <div id="outputBox"></div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
